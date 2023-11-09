@@ -1,4 +1,4 @@
-# Simple monitoring system 
+# Simple Monitoring System 
 ## TEMPLATE
 
 To monitor your system independently from other system using github
