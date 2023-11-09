@@ -15,8 +15,8 @@ To deliver your changes to the server - simply push change to the repository and
 
 1. Create your repository
 2. Configure root to be able to push to that repo (copy keys, etc.)
-3. Configure crontab:
+3. Configure crontab :
 
-`sudo crontab -e`
+    `sudo crontab -e`
 
-`0 0 * * * cd /home/user/my_sms/bash && bash run.sh`
+    `0 0 * * * cd /home/user/my_sms/bash && bash run.sh`
