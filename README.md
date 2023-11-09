@@ -9,9 +9,10 @@ You can add new scripts and organize the folder structure to your needs.
 - Collect information daily or hourly
 - Create new files or overwrite existing one.
 
-To deliver your changes to the server - simply push change to the repository and next time scheduler run scripts it will pull your changes.
+You can adjust scripts remotely - simply push changes to the repository and changes will be pulled by `run.sh` during next scheduler execution.
 
-# installation 
+
+# Installation 
 
 1. Create your repository
 2. Configure root to be able to push to that repo (copy keys, etc.)
