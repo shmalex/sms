@@ -13,7 +13,7 @@ out=$outdir/myip.log
 bash ./myip.sh  $out
 
 echo ifconfig
-ifconfig > $outdir/ifconfig.log
+ifconfig |cat> $outdir/ifconfig.log
 
 echo ip
 ip -6 addr > $outdir/ip.log
@@ -29,7 +29,10 @@ mkdir -p $out
 bash pings.sh $out
 
 echo Fierwall
-ufw status verbose > $outdir/ufw_status.log
+ufw status verbose |cat> $outdir/ufw_status.log
+
+echo iptables
+iptables -L |cat > $outdir/iptables.log
 
 echo Git
 git add ../*
