@@ -13,10 +13,10 @@ out=$outdir/myip.log
 bash ./myip.sh  $out
 
 echo ifconfig
-ifconfig |cat> $outdir/ifconfig.log
+/sbin/ifconfig > $outdir/ifconfig.log 2>&1
 
 echo ip
-ip -6 addr > $outdir/ip.log
+ip -6 addr > $outdir/ip.log 2>&1
 
 echo Who
 w    > $outdir/w.log
@@ -29,13 +29,13 @@ mkdir -p $out
 bash pings.sh $out
 
 echo Fierwall
-ufw status verbose |cat> $outdir/ufw_status.log
+ufw status verbose > $outdir/ufw_status.log 2>&1
 
 echo iptables
-iptables -L |cat > $outdir/iptables.log
+/sbin/iptables -L > $outdir/iptables.log 2>&1
 
 echo Git
 git add ../*
-git commit -m 'asd'
+git commit -m 'updates'
 git push
 chown -R user:user .
