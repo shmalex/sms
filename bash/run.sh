@@ -29,7 +29,7 @@ mkdir -p $out
 bash pings.sh $out
 
 echo Fierwall
-ufw status verbose > $outdir/ufw_status.log 2>&1
+/usr/sbin/ufw status verbose > $outdir/ufw_status.log 2>&1
 
 echo iptables
 /sbin/iptables -L > $outdir/iptables.log 2>&1
